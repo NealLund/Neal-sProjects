@@ -1,0 +1,15 @@
+<!DOCTYPE HTML>
+<html xmlns:th="https://www.thymeleaf.org">
+	<head> 
+	    <title>Getting Started: Handling Form Submission</title>
+	</head>
+	<body>
+		<h1>Congratulations</h1>
+	    <p th:text="'Cubicle number: '+ ${personForm.cubeNum}" />
+	    <p th:text="'Is scheduled to visit the office on: ' + ${#dates.format(personForm.scheduleDate, 'MMMM dd, yyyy')}" />
+	 	<p th:text="'A reminder email has been sent to your email! ' " />
+	 	<p> Please remember to bring PPE and look at the company guidelines prior to coming into the office.
+	    <p>
+	    <a href="/">Submit another request</a>
+	</body>
+</html>

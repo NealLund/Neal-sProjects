@@ -1,0 +1,12 @@
+<!DOCTYPE HTML>
+<html xmlns:th="https://www.thymeleaf.org">
+	<head> 
+	    <title>Getting Started: Handling Form Submission</title>
+	</head>
+	<body>
+		<h1>Unable to schedule</h1>
+	    <p th:text="'Cubicle: ' + ${personForm.cubeNum}" />
+	    <p th:text="'Is already scheduled on date: ' + ${#dates.format(personForm.scheduleDate, 'MMMM dd, yyyy')}" /> 
+	    <a href="/">Submit another request</a>
+	</body>
+</html>

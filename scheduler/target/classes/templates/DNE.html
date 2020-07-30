@@ -1,0 +1,11 @@
+<!DOCTYPE HTML>
+<html xmlns:th="https://www.thymeleaf.org">
+	<head> 
+	    <title>Getting Started: Handling Form Submission</title>
+	</head>
+	<body>
+		<h1>Unable to schedule</h1>
+	    <p th:text="'Cubicle ' + ${personForm.cubeNum} + ' does not exist! '" />
+	    <a href="/">Submit another request</a>
+	</body>
+</html>

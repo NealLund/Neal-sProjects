@@ -1,0 +1,21 @@
+<html>
+    <body>
+        <form action="#" th:action="@{/cancel}" th:object="${cancelForm}" method="post">
+        <div class="alert alert-danger" th:if="${#fields.hasErrors('*')}">
+		    <p th:each="err : ${#fields.errors('*')}" th:text="${err}"></p>   		
+		</div>
+			<h1>Enter Cube Number To Cancel</h1>
+            <table>
+                <tr>
+                    <td>Cube Number:</td>
+                    <td><input type="text" th:field="*{cubeNum}" /></td>
+                    <td th:if="${#fields.hasErrors('cubeNum')}" th:errors="*{cubeNum}">Name Error</td>
+                </tr>
+                <tr>
+                    <td><button type="submit">Submit</button></td>
+                    <td><button type="reset">Reset</button></td>
+                </tr>
+            </table>
+        </form>
+    </body>
+</html>

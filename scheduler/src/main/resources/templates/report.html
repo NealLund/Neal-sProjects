@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<style>
+#users {
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 50%;
+}
+
+#users td, #customers th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#users tr:nth-child(even){background-color: #f2f2f2;}
+
+#users tr:hover {background-color: #ddd;}
+
+#users th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #4CAF50;
+  color: white;
+}
+</style>
+</head>
+<body>
+
+
+
+<table class="js-sort-table" id=users>
+    <thead>
+        <tr>
+            <th> Cube </th>
+            <th> Date </th>
+        </tr>
+    </thead>
+    <tbody>
+	<tr th:if="${report.empty}">
+            <td colspan="2"> No Data Available </td>
+        </tr>
+        <tr th:each="report : ${report}">
+            <td><span th:text="${report.cubeNum}"> Cube </span></td>
+            <td><span th:text="${report.bookDate}"> Date </span></td>
+        </tr>
+    </tbody>
+</table>
